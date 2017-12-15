@@ -7,38 +7,50 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	font-weight: bold;
-	padding-top: 100px;
+	padding-top: 50px;
 	color: #fff;
 }
 
 h2 {
 	font-size: 1.875em;
-	font-weight: 700
+	font-weight: 700;
 }
+
+h3 {
+	font-size: 1.3em;
+}
+
 
 /* Sections with bg image */
 
 .bg-image {
   background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
 }
 
 .bg-image-medium {
-  height: 430px;
+  background-size: 100%;
+  background-position: 0% 90%;
+  height: 50vh;
 }
 
 .bg-image-large {
-  height: 550px;  
+  background-size: 100%;
+  background-position: 0% 90%;
+}
+.row{
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .bg-image-1 {
   background-image: url('../assets/images/taxi.jpg');
+  
 }
 
 .bg-image-2 {
   background-image: url('../assets/images/conduce.jpg');  
 }
+
 
 /* Content */
 
@@ -49,6 +61,7 @@ h2 {
 
 .orange-section {
   background-color: var(--orange);
+  
 }
 
 .grey-section {
@@ -59,7 +72,6 @@ h2 {
 
 .navbar-default {
 	background-color: inherit;
-	height: 100px;
 }
 
 .btn-white {
@@ -70,7 +82,7 @@ h2 {
 }
 
 .border {
-	margin-top: 25%;
+	margin: 25% 0;
 }
 
 .inline {
@@ -91,6 +103,30 @@ h2 {
 
 .img-2 img {
 	width: 100%;
+}
+
+.ml {
+	margin-left: 8px;
+}
+
+.mt {
+	margin-top: 8px;
+}
+
+.img-header {
+	width: 100px;
+}
+
+.border-2 {
+	border: 1px solid #fff;
+}
+
+.border-3 {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.btn-orange {
+	background-color: var(--orange);
 }
 
 @media (min-width: 768px) {
