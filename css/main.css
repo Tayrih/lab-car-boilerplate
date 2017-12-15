@@ -1,1 +1,47 @@
-/* Los estilos de tu proyecto */
+:root{
+    --orange : #f7b617;
+    --grey :#2b2b2b;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	padding-top: 70px;
+	color: #fff;
+}
+
+/* Sections with bg image */
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bg-image-medium {
+  height: 430px;
+}
+
+.bg-image-large {
+  height: 550px;  
+}
+
+.bg-image-1 {
+  background-image: url('../assets/images/taxi.jpg');
+}
+
+.bg-image-2 {
+  background-image: url('../assets/images/conduce.jpg');  
+}
+
+/* Content */
+
+.orange-section {
+  background-color: var(--orange);
+}
+
+.grey-section {
+	background-color: var(--grey);
+}
+
+
+
