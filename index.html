@@ -11,36 +11,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
-      <div class="">
-        <div class="">
-          <img src="assets/images/logoForma.png" alt="Logo Forma">
-        </div>
-        <div class="">
-          <nav>
-            <li>Viaja</li>
-            <li>Conduce</li>
-            <li>Inicia Sesión</li>
-          </nav>
-        </div>
-      </div>
+    <header class="white">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img src="assets/images/logoForma.png" alt="Logo Forma">
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="#">Viaja</a></li>
+              <li><a href="#">Conduce</a></li>
+              <li><a href="#">Inicia Sesión</a></li>             
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
     </header>
     <main>
       <section class="bg-image bg-image-large bg-image-1">
         <div class="row">
-          <div class="col-xs-8 orange-section">
-            <h1>Disfruta del viaje</h1>
-            <h1>Eres dueño de tu tiempo</h1>
-            <h2>Viaja con</h2>
-            <img src="assets/images/logoBlanco.png" alt="Logo Blanco">
-            <button type="button" name="button">Regístrate</button>
-            <h2>O bien</h2>
-            <button type="button" name="button">Conviértete en un conductor</button>
+          <div class="col-xs-9 orange-section visible-sm border">
+              <h2>Disfruta del viaje</h2>
+              <h2>Eres dueño de tu tiempo</h2>
+              <h2>Viaja con</h2>
+              <img src="assets/images/logoBlanco.png" alt="Logo Blanco">
+              <button type="button" name="button">Regístrate</button>
+              <h2>O bien</h2>
+              <button type="button" name="button">Conviértete en un conductor</button>
+          </div>
+          <div class="col-xs-9 col-xs-offset-3 orange-section border">
+              <h2>Comienza a viajar</h2>
+              <h2 class="inline-b">con</h2>
+              <div class="img1">
+                <img src="assets/images/logoBlanco.png" alt="Logo Blanco">
+              </div>
+              <button type="button" name="button" class="btn btn-white">Descarga App</button>
           </div>
         </div>
       </section>
       <section class="orange-section">
-        <div class="">
+        <div class="row">
+          <div class="visible-sm">
           <div class="">
             <img src="assets/images/iPhone6Plus.png" alt="iPhone-Plus">
           </div>
@@ -48,6 +68,18 @@
             <h2>Descarga la nueva app</h2>
             <p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
             <p>Con solo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a donde ir</p>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row">
+            <div class="col-xs-12">
+              <h2>La nueva app</h2>
+              <div class="img-2">
+                <img src="assets/images/iPhone6Plus.png" alt="iPhone-Plus">
+              </div>
+              <h2>Llega a tu destino aún más rápido</h2>
+            </div>
           </div>
         </div>
       </section>
