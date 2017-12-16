@@ -78,19 +78,23 @@ h3 {
 	background-color: #fff;
 	border-style: none;
 	color: #000;
+	display: block;
+	font-weight: 600px;
 	margin: 20px 0;
 }
 
 .border {
-	margin: 25% 0;
+	margin-top: 25%;
+	margin-bottom: 25%;
 }
 
 .inline {
-	display: inline;
+	display: inline-flex;
 }
 
 .img1 {
-	width: 30%;
+	width: 120px;
+
 }
 
 .img1 img {
@@ -98,7 +102,8 @@ h3 {
 }
 
 .img-2 {
-	width: 50%;
+	width: 100%;
+	padding: 10%;
 }
 
 .img-2 img {
@@ -113,21 +118,58 @@ h3 {
 	margin-top: 8px;
 }
 
+.mb {
+	margin-bottom: 8px;
+	border-bottom: 1px solid #fff;
+}
+
 .img-header {
 	width: 100px;
 }
 
 .border-2 {
 	border: 1px solid #fff;
+	padding: 0 10%;
 }
 
 .border-3 {
 	background-color: rgba(0,0,0,0.5);
+	padding-top: 10%;
 }
 
 .btn-orange {
 	background-color: var(--orange);
 }
+
+.border-4 {
+	padding: 15% 5% 5% 5%;
+}
+
+.icon {
+	width: 4%;
+}
+
+.icon img {
+	width: 100%;
+}
+.form-control {
+	width: 95%;
+	background-color: inherit;
+	color: #fff;
+	border: 1px solid #fff;
+}
+
+.form-control::placeholder { 
+	color: #fff; 
+	font-weight: 700; 
+}
+
+.image-footer {
+	width: 120px;
+}
+ ul {
+ 	list-style: none;
+ }
 
 @media (min-width: 768px) {
 	body {
