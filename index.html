@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav white navbar-right">
               <li><a href="#">Viaja</a></li>
               <li><a href="#">Conduce</a></li>
-              <li><a href="#">Inicia Sesión</a></li>             
+              <li><a href="#loggin" data-toggle="modal">Inicia Sesión</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -49,9 +49,9 @@
               <div class="img1 inline">
                 <img src="assets/images/logoBlanco.png" alt="Logo Blanco">
               </div>              
-              <button type="button" name="button" class="btn btn-white">Regístrate</button>
+              <button type="button" name="button" class="btn btn-white" data-toggle="modal" data-target="#register">Regístrate</button>
               <div class="line"><h5 class="inline">O bien</h5></div>
-              <button type="button" name="button" class="btn btn-white">Conviértete en un conductor</button>
+              <button type="button" name="button" class="btn btn-white" data-toggle="modal" data-target="#conductor">Conviértete en un conductor</button>
           </div>
         <div class="row">
           <div class="col-xs-10 col-xs-offset-2 orange-section border visible-xs">
@@ -191,4 +191,151 @@
     <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
+  <!--modals-->
+  <!--modal login-->
+  <div class="modal fade" id="loggin">
+    <div class="modal-dialog">
+      <div class="modal-content modal-log">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 img-modal">
+              <img src="assets/images/login.png" alt="login">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3 form-container mt mb">
+            <form role="form">
+              <div class="form-group border-login mt">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="user" class="form-control border-form" id="user-name"
+                       placeholder="Ussername">
+              </div>
+              <div class="form-group border-login">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" class="form-control border-form" id="password" 
+                       placeholder="Contraseña">
+              </div>
+              <button type="submit" class="btn btn-default center-block btn-orange mb">Enviar</button>
+              <span class="mb span-modal">Forgot password?<a>click here</a></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal register-->
+  <div class="modal fade" id="register">
+    <div class="modal-dialog">
+      <div class="modal-content modal-register">
+        <div class="row">
+          <div class="col-xs-12">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="box-black text-center mt p"><p>¿Ya tiene una cuenta?</p></div>
+            <div class="text-center p"><p>O crea una cuenta nueva</p></div>
+            <div class="col-xs-12">
+              <form role="form">
+                <div class="form-group">
+                  <div class="form-inline name">
+                    <div class="form-group col-xs-6">
+                      <input type="name" class="form-control border-reg" id="first-name" placeholder="Nombre">
+                    </div>
+                    <div class="form-group col-xs-6">
+                      <input type="name" class="form-control border-reg" id="second-name" placeholder="Apellido">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control border-reg" id="email" placeholder="Introduce tu email">
+                </div>
+                <div class="form-group">
+                  <input type="fone" class="form-control border-reg" id="fone-number" placeholder="Teléfono">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control border-reg" id="password" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control border-reg" id="city" placeholder="Ciudad">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control border-reg" id="code" placeholder="(Opcional) Código de invitación">
+                </div>
+                  <div class="form-group btn-group">
+                    <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> ¿Cómo te enteraste de nosotros?<span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Redes Sociales</a></li>
+                        <li><a href="#">Radio</a></li>
+                        <li><a href="#">Periódico</a></li>
+                      </ul>
+                </div>              
+                <button type="submit" class="btn btn-default center-block btn-info btn-lg mb">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Conductor-->
+  <div class="modal fade" id="conductor">
+    <div class="modal-dialog">
+      <div class="modal-content modal-register">
+        <div class="row">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <div class="container-fluid">
+            <div class="col-xs-12 mt">
+              <form role="form">
+                <div class="form-group btn-group btn-conductor">
+                  <p>¿Tienes vehículo de cuatro puertas?</p>
+                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Sí</a></li>
+                    <li><a href="#">No</a></li>
+                  </ul>
+                </div>
+                <div class="form-group btn-group btn-conductor">
+                  <p>Marca</p>
+                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige la marca del vehículo<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Nisan</a></li>
+                    <li><a href="#">Toyota</a></li>
+                  </ul>
+                </div>
+                <span class="span-c">¿No ves tú vehículo en la lista? Envía un correo electrónico a sociosmdv@uber.com</span>      
+                <div class="form-group btn-group btn-conductor">
+                  <p>Modelo</p>
+                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Modelo 1</a></li>
+                    <li><a href="#">Modelo 2</a></li>
+                    <li><a href="#">Modelo 3</a></li>
+                  </ul>
+                </div>
+                <div class="form-group btn-group btn-conductor">
+                  <p>Año</p>
+                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">2017</a></li>
+                    <li><a href="#">2016</a></li>
+                    <li><a href="#">2015</a></li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control border-reg" id="code" placeholder="Número de matrícula">
+                  <span class="span-c">El número de la matrícula ayuda a los clientes a identificar tu vehículo</span>
+                </div>
+                <button type="submit" class="btn btn-default center-block btn-info btn-lg mb">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </html>
