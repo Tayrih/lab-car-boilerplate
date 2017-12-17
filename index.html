@@ -29,7 +29,7 @@
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav white menu-right">
+            <ul class="nav navbar-nav white navbar-right">
               <li><a href="#">Viaja</a></li>
               <li><a href="#">Conduce</a></li>
               <li><a href="#">Inicia Sesión</a></li>             
@@ -42,18 +42,19 @@
       <section class="bg-image bg-image-large bg-image-1">
         <div class="row">
           <div class="col-sm-5 col-sm-offset-7 orange-section visible-sm visible-md visible-lg border">
-              <h3>Disfruta del viaje</h3>
-              <h3>Eres dueño de tu tiempo</h3>
+              <h2>Disfruta del viaje</h2>
+              <h2>Eres dueño de tu tiempo</h2>
+              </br>
               <h3 class="inline">Viaja con</h3>
               <div class="img1 inline">
                 <img src="assets/images/logoBlanco.png" alt="Logo Blanco">
               </div>              
               <button type="button" name="button" class="btn btn-white">Regístrate</button>
-              <h3>O bien</h3>
+              <div class="line"><h5 class="inline">O bien</h5></div>
               <button type="button" name="button" class="btn btn-white">Conviértete en un conductor</button>
           </div>
         <div class="row">
-          <div class="col-xs-9 col-xs-offset-3 orange-section border visible-xs">
+          <div class="col-xs-10 col-xs-offset-2 orange-section border visible-xs">
               <h2>Comienza a viajar</h2>
               <h2 class="inline">con</h2>
               <div class="img1 inline">
@@ -67,10 +68,10 @@
       <section class="orange-section">
         <div class="row">
           <div class="col-sm-10 visible-sm visible-md visible-lg border-s2">
-            <div class="col-sm-6 img-s2">
+            <div class="col-sm-6 col-md-6 col img-s2">
               <img src="assets/images/iPhone6Plus.png" alt="iPhone-Plus">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 col-md-4">
               <h3>Descarga la nueva app</h3>
               <p>La versión actualizada de LabCar está llena de nuevas funciones para llegar a donde quieras aún más fácil y rápido.</p>
               <p>Con solo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente a donde ir</p>
@@ -91,7 +92,7 @@
       </section>
       <section class="bg-image bg-image-medium bg-image-2">
         <div class="row">
-          <div class="col-xs-12 col-sm-4 col-sm-offset-8 border-3">
+          <div class="col-xs-12 col-sm-4 col-sm-offset-8  border-3">
             <h3>Conduce cuando quieras</h3>
             <p>LabCar es una opción flexible para alcanzar tus metas financieras</p>
             <button type="button" name="button" class="btn btn-orange">Conviértete en un conductor</button>
@@ -103,15 +104,25 @@
           <div class="col-xs-12 col-sm-6 border-4">
             <h3>Tarifas</h3>
             <p>Consulta las tarifas LabCar aquí</p>
-            <div class="form mb">
-              <img src="assets/images/shape.png" alt="Shape" class="icon">
-              <input type="input" name="input" class="form-control" placeholder="Ingrese su punto de partida">
+            <div class="tarifas">
+              <div class="col-xs-1">
+                <img src="assets/images/shape.png" alt="Shape" class="icon">
+              </div>
+              <div class="col-xs-10">
+                <input type="input" name="input" class="form-control" placeholder="Ingrese su punto de partida">  
+              </div>
             </div>
-            <div class="form mb">
-              <img src="assets/images/shape2.png" alt="Shape-2" class="icon">
-              <input type="input" name="input" class="form-control" placeholder="Ingrese su destino">
+            <div class="tarifas">
+              <div class="col-xs-1">
+                <img src="assets/images/shape2.png" alt="Shape-2" class="icon">
+              </div>
+              <div class="col-xs-10">
+                <input type="input" name="input" class="form-control" placeholder="Ingrese su destino">
+              </div>
             </div>  
-            <button type="button" name="button" class="btn btn-white">¡Trazar ruta!</button>
+            <div class="col-xs-4 col-xs-offset-4">
+              <button type="button" name="button" class="btn btn-white">¡Trazar ruta!</button>  
+            </div>
           </div>
           <div class=" col-xs-12 col-sm-6 mb">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.796403138974!2d-77.0228706857207!3d-12.126078446681245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8033db388c3%3A0x73793f367683122!2sAv.+Alfredo+Benavides+1180%2C+Cercado+de+Lima+15047!5e0!3m2!1ses-419!2spe!4v1513439847929" class="map" allowfullscreen></iframe>
@@ -119,15 +130,15 @@
         </div>
       </section>
     </main>
-    <footer class="grey-section">
-      <div class="row">
-        <div class="img-footer col-xs-12 mt">
-            <img src="assets/images/logoBlanco.png" alt="Logo-blanco">
-            <hr>
+    <footer class="gray-section">
+      <div class="container">
+        <div class="row">
+          <div class="img-footer mt">
+              <img src="assets/images/logoBlanco.png" alt="Logo-blanco">
+              <hr>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-2">
+        <div class="col-xs-6 col-sm-offset-3 col-sm-3">
           <ul class="list-ul">
             <li>Viaja</li>
             <li>Conduce</li>
@@ -139,36 +150,40 @@
             <li>Seguridad</li>
           </ul>
         </div>
-        <div class="col-sm-2 visible-sm visible-md visible-lg">
-          <ul class="list-ul">
-            <li>Oportunidades</li>
-            <li>Nuestra historia</li>
-            <li>API de LabCar</li>
-            <li>Eventos</li>
-            <li>Desarrolladores</li>
-            <li>Servicios</li>
-            <li>Laboratoria</li>
-            <li>Coders</li>
-          </ul>
+          <div class="col-sm-2 visible-sm visible-md visible-lg">
+            <ul class="list-ul">
+              <li>Oportunidades</li>
+              <li>Nuestra historia</li>
+              <li>API de LabCar</li>
+              <li>Eventos</li>
+              <li>Desarrolladores</li>
+              <li>Servicios</li>
+              <li>Laboratoria</li>
+              <li>Coders</li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-sm-12">
+            <div class="col-xs-12">
+              <ul class="inline">
+                <li class="list"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li class="list"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                <li class="list"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                <li class="list"><i class="fa fa-apple" aria-hidden="true"></i></li>
+                <li class="list"><i class="fa fa-play" aria-hidden="true"></i></li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 img-3 apps-img">
+              <img src="assets/images/appstore.png" alt="app-store">
+              <img src="assets/images/enBadgeWebGeneric.png" alt="icon">
+            </div>
+          </div>
+          
         </div>
-        <div class="col-xs-6 col-sm-2">
-          <ul class="inline">
-            <li class="list"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-            <li class="list"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-            <li class="list"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
-            <li class="list"><i class="fa fa-apple" aria-hidden="true"></i></li>
-            <li class="list"><i class="fa fa-play" aria-hidden="true"></i></li>
-          </ul>
-        </div>
-        <div class="col-xs-6 col-sm-2 img-3">
-          <img src="assets/images/appstore.png" alt="app-store">
-          <img src="assets/images/enBadgeWebGeneric.png" alt="icon">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 mb">
-          <hr>
-          <span>&#169; 2017 LabCar technologies Inc.</span>
+        <div class="row">
+          <div class="col-xs-12 copyright">
+            <hr>
+            <span>&#169; 2017 LabCar technologies Inc.</span>
+          </div>
         </div>
       </div>
     </footer>
