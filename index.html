@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lab-ar</title>
+    <title>Lab-Car</title>
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -199,25 +199,25 @@
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <div class="row">
-            <div class="col-xs-4 col-xs-offset-4 img-modal">
+            <div class="col-xs-5 col-xs-offset-4 img-modal">
               <img src="assets/images/login.png" alt="login">
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-6 col-xs-offset-3 form-container mt mb">
+          <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 form-container mt mb">
             <form role="form">
-              <div class="form-group border-login mt">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="user" class="form-control border-form" id="user-name"
-                       placeholder="Ussername">
+              <div class="input-group mt mb">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+                <input type="text" class="form-control border-reg" id="user-name" placeholder="Username">
               </div>
-              <div class="form-group border-login">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" class="form-control border-form" id="password" 
-                       placeholder="Contraseña">
+              <div class="input-group  mt mb">
+                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control  border-reg" id="user-name" placeholder="Contraseña">
               </div>
-              <button type="submit" class="btn btn-default center-block btn-orange mb">Enviar</button>
+              <div class="input-group mt mb col-sm-12">
+                <button type="submit" class="btn btn-warning mb col-sm-4 col-sm-offset-4">LOGIN</button>
+              </div>
               <span class="mb span-modal">Forgot password?<a>click here</a></span>
             </form>
           </div>
@@ -232,45 +232,62 @@
         <div class="row">
           <div class="col-xs-12">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <div class="box-black text-center mt p"><p>¿Ya tiene una cuenta?</p></div>
-            <div class="text-center p"><p>O crea una cuenta nueva</p></div>
-            <div class="col-xs-12">
-              <form role="form">
+            <div class="form-group">
+              <div class="col-sm-12 mb">
+                <button type="submit" class="btn btn-info btn-block btn-lg box-black mb ">¿Ya tienes una cuenta?</button>
+                <div class="text-center">O CREA UNA CUENTA NUEVA</div>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <form role="form" class="form-horizontal">
                 <div class="form-group">
-                  <div class="form-inline name">
-                    <div class="form-group col-xs-6">
-                      <input type="name" class="form-control border-reg" id="first-name" placeholder="Nombre">
-                    </div>
-                    <div class="form-group col-xs-6">
-                      <input type="name" class="form-control border-reg" id="second-name" placeholder="Apellido">
-                    </div>
+                  <div class="col-sm-6"> 
+                    <input type="name" class="form-control border-reg" id="first-name" placeholder="Nombre">
+                  </div>
+                  <div class="col-sm-6"> 
+                    <input type="name" class="form-control border-reg" id="second-name" placeholder="Apellido">
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control border-reg" id="email" placeholder="Introduce tu email">
+                  <div class="col-sm-12">
+                    <input type="email" class="form-control border-reg" id="email" placeholder="Introduce tu email">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <input type="fone" class="form-control border-reg" id="fone-number" placeholder="Teléfono">
+                  <div class="col-sm-12">
+                    <input type="fone" class="form-control border-reg" id="fone-number" placeholder="Teléfono">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control border-reg" id="password" placeholder="Contraseña">
+                  <div class="col-sm-12">
+                    <input type="password" class="form-control border-reg" id="password" placeholder="Contraseña">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control border-reg" id="city" placeholder="Ciudad">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control border-reg" id="city" placeholder="Ciudad">
+                  </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control border-reg" id="code" placeholder="(Opcional) Código de invitación">
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control border-reg" id="code" placeholder="(Opcional) Código de invitación">
+                  </div>
                 </div>
-                  <div class="form-group btn-group">
-                    <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> ¿Cómo te enteraste de nosotros?<span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Redes Sociales</a></li>
-                        <li><a href="#">Radio</a></li>
-                        <li><a href="#">Periódico</a></li>
-                      </ul>
-                </div>              
-                <button type="submit" class="btn btn-default center-block btn-info btn-lg mb">Enviar</button>
+                <div class="form-group">
+                  <div class="col-sm-12">
+                    <select class="form-control border-reg input-lg">
+                      <option>¿Cómo te enteraste de nosotros?</option>
+                      <option>Redes Sociales</option>
+                      <option>Radio</option>
+                      <option>Periódico</option>
+                    </select>
+                  </div>
+                </div>         
+                <div class="form-group">
+                  <div class="col-sm-12 mb">
+                    <button type="submit" class="btn btn-info btn-block btn-lg">Enviar</button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
@@ -282,59 +299,59 @@
   <div class="modal fade" id="conductor">
     <div class="modal-dialog">
       <div class="modal-content modal-register">
-        <div class="row">
+        <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        </div>
           <div class="container-fluid">
-            <div class="col-xs-12 mt">
-              <form role="form">
-                <div class="form-group btn-group btn-conductor">
-                  <p>¿Tienes vehículo de cuatro puertas?</p>
-                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Sí</a></li>
-                    <li><a href="#">No</a></li>
-                  </ul>
-                </div>
-                <div class="form-group btn-group btn-conductor">
-                  <p>Marca</p>
-                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige la marca del vehículo<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Nisan</a></li>
-                    <li><a href="#">Toyota</a></li>
-                  </ul>
-                </div>
-                <span class="span-c">¿No ves tú vehículo en la lista? Envía un correo electrónico a sociosmdv@uber.com</span>      
-                <div class="form-group btn-group btn-conductor">
-                  <p>Modelo</p>
-                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Modelo 1</a></li>
-                    <li><a href="#">Modelo 2</a></li>
-                    <li><a href="#">Modelo 3</a></li>
-                  </ul>
-                </div>
-                <div class="form-group btn-group btn-conductor">
-                  <p>Año</p>
-                  <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown"> Elige una opción<span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">2017</a></li>
-                    <li><a href="#">2016</a></li>
-                    <li><a href="#">2015</a></li>
-                  </ul>
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 mt">
+              <form role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="control-label black-label">¿Tienes vehículo de cuatro puertas?</label>
+                  <select class="form-control border-reg">
+                    <option>Elige una opción</option>
+                    <option>Sí</option>
+                    <option>No</option>
+                  </select>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control border-reg" id="code" placeholder="Número de matrícula">
+                  <label class="control-label black-label">Marca</label>
+                  <select class="form-control border-reg">
+                    <option>Elige la marca del vehículo</option>
+                    <option>Nisan</option>
+                    <option>Toyota</option>
+                  </select>
+                </div>
+                <span class="span-c">¿No ves tú vehículo en la lista? Envía un correo electrónico a <a href="#">sociosmdv@uber.com</a></span>
+                <div class="form-group">
+                  <label class="control-label black-label">Modelo</label>
+                  <select class="form-control border-reg">
+                    <option>Elige una opción</option>
+                    <option>Modelo 1</option>
+                    <option>Modelo 2</option>
+                    <option>Modelo 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="control-label black-label">Año</label>
+                  <select class="form-control border-reg">
+                    <option>Elige una opción</option>
+                    <option>2017</option>
+                    <option>2016</option>
+                    <option>2015</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="control-label black-label">Número de la matrícula</label>
+                  <input type="text" class="form-control border-reg" id="code" placeholder="Número de la matrícula">
                   <span class="span-c">El número de la matrícula ayuda a los clientes a identificar tu vehículo</span>
                 </div>
-                <button type="submit" class="btn btn-default center-block btn-info btn-lg mb">Enviar</button>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-info btn-block btn-lg mb">Enviar</button>
+                </div>
               </form>
             </div>
           </div>
-        </div>
+        
       </div>
     </div>
   </div>
