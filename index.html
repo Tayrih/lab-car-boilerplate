@@ -109,7 +109,7 @@
                 <img src="assets/images/shape.png" alt="Shape" class="icon">
               </div>
               <div class="col-xs-10">
-                <input type="input" name="input" class="form-control" placeholder="Ingrese su punto de partida">  
+                <input type="input" name="input" id="origin"class="form-control" placeholder="Ingrese su punto de partida">  
               </div>
             </div>
             <div class="tarifas">
@@ -117,7 +117,7 @@
                 <img src="assets/images/shape2.png" alt="Shape-2" class="icon">
               </div>
               <div class="col-xs-10">
-                <input type="input" name="input" class="form-control" placeholder="Ingrese su destino">
+                <input type="input" name="input" id="destino" class="form-control" placeholder="Ingrese su destino">
               </div>
             </div>  
             <div class="col-xs-4 col-xs-offset-4">
@@ -125,7 +125,8 @@
             </div>
           </div>
           <div class=" col-xs-12 col-sm-6 mb">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.796403138974!2d-77.0228706857207!3d-12.126078446681245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8033db388c3%3A0x73793f367683122!2sAv.+Alfredo+Benavides+1180%2C+Cercado+de+Lima+15047!5e0!3m2!1ses-419!2spe!4v1513439847929" class="map" allowfullscreen></iframe>
+            <div id="map"></div>
+            <!-- mapa -->
           </div>
         </div>
       </section>
@@ -189,6 +190,7 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Qj1kkYEzSk6V67rX5p1ZVLwWX-Y4tpk&callback=initMap&libraries=places" type="text/javascript"></script>
     <script type="text/javascript" src="js/app.js"></script>
   </body>
   <!--modals-->
