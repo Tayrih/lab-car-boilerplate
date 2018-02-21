@@ -1,114 +1,91 @@
-var map = null;
-var directionsDisplay, directionsService;
-var markers = [];
+window.addEventListener('load', function() {
+  var map;
+  var directionsDisplay = new google.maps.DirectionsRenderer;
+  var directionsService = new google.maps.DirectionsService;
+  var btnRuta = document.getElementById('btn-ruta');
+  var originVal = /** @type {!HTMLInputElement} */(
+    document.getElementById('origin-value'));
+  var destinationVal = /** @type {!HTMLInputElement} */(
+    document.getElementById('destination-value'));
+  var markers = [];
+  initMap();
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), { // ubicación del mapa en general
-    zoom: 15, 
-    center: { lat: -12.045916, 
-      lng: -77.030583 }, // ubicacion inicial
-    mapTypeControl: false,
-    zoomControl: true,
-    streetViewControl: false
-  });
-
-  var infoWindow = new google.maps.InfoWindow({map: map});
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      infoWindow.setPosition(pos);
-      infoWindow.setContent('You Are Here!');
-      map.setCenter(pos);
-    }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {
+        lat: -12.045738,
+        lng: -77.030594
+      },
+      zoom: 15
     });
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
 
-  //   //  marker clusterer
-  //   var markerCluster = new MarkerClusterer(map, markers, {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-  // }
+    var infoWindow = new google.maps.InfoWindow({map: map});
 
+    // HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
 
-  // autocompletado de origen
-  var origin = document.getElementById('origin');
-  var autocompleteOrigin = new google.maps.places.Autocomplete(origin);
-  autocompleteOrigin.bindTo('bounds', map);
+        // geocoder inverso
 
-  // autocompletado de destino
-  var destino = document.getElementById('destino');
-  var autocompleteDestino = new google.maps.places.Autocomplete(destino);
-  autocompleteDestino.bindTo('bounds', map);
+        let geocoder = new google.maps.Geocoder;
+        geocoder.geocode({
+          'location': pos
+        }, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+              console.log(results[1].formatted_address);
+              originVal.value = results[1].formatted_address;
+            }
+          }
+        });
 
-  directionsDisplay = new google.maps.DirectionsRenderer(/* {suppressMarkers: true}*/);
-  directionsService = new google.maps.DirectionsService();
+        // posicion generada porgeolocalizacion
+        var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          icon: 'https://user-images.githubusercontent.com/32286691/36465402-d9f5fd12-16a2-11e8-9ac0-28f4ca4bbd9f.png'
+        });
 
-  directionsDisplay.setMap(map);
-};
+        map.setCenter(pos);
 
-var onRutaClick = function() {
-  console.log('Click en ruta');
-  calculateAndDisplayRoute(directionsService, directionsDisplay);
-};
+        // autocompletado
+        var origin = document.getElementById('origin-value');
+        var autocompleteOrigin = new google.maps.places.Autocomplete(origin);
+        autocompleteOrigin.bindTo('bounds', map);
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-  directionsService.route({
-    origin: document.getElementById('origin').value,
-    destination: document.getElementById('destino').value,
-    travelMode: 'DRIVING'
-  }, (response, status) => {
-    console.log('Response : ' + JSON.stringify(response) + ' STATUS > ' + status);
-    if (status === 'OK') {
-      directionsDisplay.setDirections(response);
+        // autocompletado de destino
+        var destination = document.getElementById('destination-value');
+        var autocompleteDestination = new google.maps.places.Autocomplete(destination);
+        autocompleteDestination.bindTo('bounds', map);
+        directionsDisplay.setMap(map);
+      });
     } else {
-      window.alert('Falló el cáculo de ruta ' + status);
+    // Browser doesn't support Geolocation
+      alert('Su navegador no soporta Geolocalización');
     }
-  });
-}
-
-function limpiar() {
-  for (let i in markers) {
-    markers[i].setMap(null);
   }
-  markers.length = 0;
 
-  directionsDisplay.setMap(null);
-  directionsDisplay = new google.maps.DirectionsRenderer(/* {suppressMarkers: true}*/);
-  directionsDisplay.setMap(map);
-}
-
-function buscar() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
-  }
-}
-
-var funcionExito = function(posicion) {
-  latitud = posicion.coords.latitude;
-  longitud = posicion.coords.longitude;
-
-  var miUbicacion = new google.maps.Marker({
-    position: { lat: latitud,
-      lng: longitud },
-    animation: google.maps.Animation.DROP,
-    // draggable:true, //con esto puedo mover mi icono donde yo quiera
-    // title:"Drag me!",
-    map: map
+  btnRuta.addEventListener('click', function(event) {
+    event.preventDefault();
+    calculateAndDisplayRoute(directionsService, directionsDisplay);
   });
 
-  markers.push(miUbicacion);
-
-  map.setZoom(17);
-  map.setCenter({ lat: latitud,
-    lng: longitud });
-};
-
-var funcionError = function(error) {
-  alert('Tenemos problemas encontrando tu ubicación');
-};
+  function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+    directionsService.route({
+      origin: originVal.value,
+      destination: destinationVal.value,
+      travelMode: 'DRIVING'
+    }, function(response, status) {
+      if (status === 'OK') {
+        directionsDisplay.setDirections(response);
+      } else {
+        window.alert('Directions request failed due to ' + status);
+      }
+    });
+    directionsDisplay.setMap(map);
+  }
+});
